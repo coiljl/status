@@ -1,6 +1,0 @@
-{
-  "production": {
-    "parse-json": "http://github.com/jkroso/parse-json/tarball/0.1.0",
-    "statuses": "http://registry.npmjs.org/statuses/-/statuses-1.2.0.tgz"
-  }
-}
