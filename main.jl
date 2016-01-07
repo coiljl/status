@@ -1,11 +1,11 @@
-@require "jkroso/parse-json" parse
+@require "github.com/jkroso/parse-json" parse
 
-const codes = Dict{String,Uint16}()
-const messages = Dict{Uint16,String}()
+const codes = Dict{ASCIIString,UInt16}()
+const messages = Dict{UInt16,ASCIIString}()
 
 open(joinpath(@dirname(), "deps/codes.json")) do io
   for (key, msg) in parse(io)
-    code = uint16(key)
+    code = Base.parse(Int, key)
     messages[code] = msg
     codes[msg] = code
   end
